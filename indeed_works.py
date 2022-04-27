@@ -12,7 +12,7 @@ class indeed:
                        "company location": [],
                        "date": [],
                     #  "summary": [],
-                      "link ": []
+                     # "link ": []
                        })
     def __init__(self, url ): # what i want to do when i call the class , i want to create a dataframe, functions what the user want
         self.url = url
@@ -29,7 +29,7 @@ class indeed:
             link = jop.find("a",class_="jcs-JobTitle" ).get("href")
             self.df.loc[len(self.df.index)] = [title, company, company_location, date
                # , summary
-             , f"https://tr.indeed.com{link}"
+             #, f"https://tr.indeed.com{link}"
             ]
            
     def get_jops(self):
