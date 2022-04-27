@@ -25,8 +25,8 @@ class indeed:
             company = jop.find(class_="companyName").text
             company_location = jop.find(class_="companyLocation").text
             date = jop.find(class_="date").text
-            summary = jop.find(id="jobDescriptionText")
-            link = jop.find("a",class_="jcs-JobTitle" ).get("href")
+            #summary = jop.find(id="jobDescriptionText")
+            #link = jop.find("a",class_="jcs-JobTitle" ).get("href")
             self.df.loc[len(self.df.index)] = [title, company, company_location, date
                # , summary
              #, f"https://tr.indeed.com{link}"
